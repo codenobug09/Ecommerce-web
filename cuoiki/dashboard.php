@@ -22,16 +22,18 @@ if(!isset($_SESSION['customer'])) {
         <div class="row">            
             <div class="col-md-12"> 
                 <?php require_once('customer-sidebar.php'); ?>
+        
             </div>
             <div class="col-md-12">
                 <div class="user-content">
                     <h3 class="text-center">
-                        <?php echo LANG_VALUE_90; ?>
+                        <?php echo "<p style='font-size: 40px; color: red;' >WELCOME TO DASHBOARD</p>" ?>
+                        
                     </h3>
                 </div>                
             </div>
         </div>
     </div>
 </div>
-
+<?php require_once('index.php'); ?>
 <?php require_once('footer.php'); ?>

@@ -101,6 +101,8 @@ foreach ($result as $row) {
 	<link rel="stylesheet" href="assets/css/select2.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 	<?php
 
@@ -294,6 +296,7 @@ foreach ($result as $row) {
 						<?php
 					} else {
 						?>
+						<li><a href="admin/login.php"><i class="fas fa-user-cog"></i> <?php echo "Admin Login"; ?></a></li>
 						<li><a href="login.php"><i class="fa fa-sign-in"></i> <?php echo LANG_VALUE_9; ?></a></li>
 						<li><a href="registration.php"><i class="fa fa-user-plus"></i> <?php echo LANG_VALUE_15; ?></a></li>
 						<?php	
