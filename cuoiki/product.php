@@ -309,7 +309,7 @@ if($success_message1 != '') {
                     </ul>
                 </div>
 
-				<div class="product">
+				<div class="product" style="border: 5px black solid;">
 					<div class="row">
 						<div class="col-md-5">
 							<ul class="prod-slider">
@@ -330,8 +330,8 @@ if($success_message1 != '') {
                                 }
                                 ?>
 							</ul>
-							<div id="prod-pager">
-								<a data-slide-index="0" href=""><div class="prod-pager-thumb" style="background-image: url(assets/uploads/<?php echo $p_featured_photo; ?>"></div></a>
+							<div id="prod-pager" style="transform:translate(5%, 0%);">
+								<a data-slide-index="0" href=""><div class="prod-pager-thumb" style=" border:1px black solid; box-shadow: rgba(0, 0, 0, 1); border-radius: 8px; background-image: url(assets/uploads/<?php echo $p_featured_photo; ?>"></div></a>
                                 <?php
                                 $i=1;
                                 $statement = $pdo->prepare("SELECT * FROM tbl_product_photo WHERE p_id=?");
@@ -339,7 +339,7 @@ if($success_message1 != '') {
                                 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                                 foreach ($result as $row) {
                                     ?>
-                                    <a data-slide-index="<?php echo $i; ?>" href=""><div class="prod-pager-thumb" style="background-image: url(assets/uploads/product_photos/<?php echo $row['photo']; ?>"></div></a>
+                                    <a data-slide-index="<?php echo $i; ?>" href=""><div class="prod-pager-thumb" style=" border:1px black solid; box-shadow: rgba(0, 0, 0, 1); border-radius: 8px; background-image: url(assets/uploads/product_photos/<?php echo $row['photo']; ?>"></div></a>
                                     <?php
                                     $i++;
                                 }
@@ -347,7 +347,7 @@ if($success_message1 != '') {
 							</div>
 						</div>
 						<div class="col-md-7">
-							<div class="p-title"><h2><?php echo $p_name; ?></h2></div>
+							<div class="p-title"><h2 style="font-size: 30px;"><?php echo $p_name; ?></h2></div>
 							<div class="p-review">
 								<div class="rating">
                                     <?php
@@ -410,10 +410,10 @@ if($success_message1 != '') {
 								</p>
 							</div>
                             <form action="" method="post">
-                            <div class="p-quantity">
-                                <div class="row">
+                            <div class="p-quantity" >
+                                <div class="row" style="display: flex; padding: 5px;">
                                     <?php if(isset($size)): ?>
-                                    <div class="col-md-12 mb_20">
+                                    <div class="col-md-12 mb_20" >
                                         <?php echo LANG_VALUE_52; ?> <br>
                                         <select name="size_id" class="form-control select2" style="width:auto;">
                                             <?php
@@ -456,8 +456,8 @@ if($success_message1 != '') {
                                 
                             </div>
 							<div class="p-price">
-                                <span style="font-size:14px;"><?php echo LANG_VALUE_54; ?></span><br>
-                                <span>
+                               
+                                <span style="font-size: 30px;">
                                     <?php if($p_old_price!=''): ?>
                                         <del><?php echo LANG_VALUE_1; ?><?php echo $p_old_price; ?></del>
                                     <?php endif; ?> 
